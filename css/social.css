@@ -1,0 +1,112 @@
+.Btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.instagram {
+    background: #dd2a7b;
+}
+
+.github {
+    background: #181818;
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.discord {
+    background: #7289da;
+}
+
+.BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+    border: 1px solid rgba(255, 110, 110, 0.466);
+    background-color: rgba(219, 219, 219, 0.466);
+    backdrop-filter: blur(4px);
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    z-index: 5;
+
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+button i {
+    font-size: 18px;
+    transition: 1s ease;
+}
+
+.footer .social {
+    z-index: 5;
+}
+
+/* Mobil uyumlu hale getirme */
+@media (max-width: 600px) {
+    .Btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social {
+        gap: 15px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    button i {
+        font-size: 16px;
+    }
+}

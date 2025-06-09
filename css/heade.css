@@ -1,0 +1,148 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+body {
+    height: 100%;
+    background-color: #2A2D36;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    height: 100%;
+    margin-top: 10%;
+    z-index: 0;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 80%;
+}
+
+.header .container h1 {
+    text-decoration: none;
+    background: linear-gradient(to right, #FF5E00, 60%, #ff077b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 20px 20px 100px #FF5E00;
+    font-size: 60px;
+}
+
+.box {
+    overflow: hidden;
+    border-radius: 42px;
+    background: #2A2D36;
+    box-shadow: 25px 25px 50px #1f2128, -25px -25px 50px #353944;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.about .img {
+    width: 50%;
+}
+
+.about .img .box {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Medya Sorguları - Mobil Cihazlar İçin */
+
+/* Küçük ekranlar: 600px ve daha küçük cihazlar (mobil) */
+@media (max-width: 820px) {
+    .header {
+        margin-top: 20%;
+        /* Üst margin'i azaltarak yerleşimi optimize et */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .container h1 {
+        font-size: 40px;
+        /* H1 font boyutunu küçült */
+        text-shadow: 10px 10px 50px #FF5E00;
+        /* H1 gölgesini küçült */
+        margin: 0 10px;
+        /* Kenar boşluklarını azalt */
+    }
+
+    .about {
+        flex-direction: column;
+        /* Resmi ve metni dikey sıraya koy */
+        margin-top: 20%;
+        /* Üst margin'i artır */
+    }
+
+    .about .img {
+        width: 80%;
+        /* Resmin genişliğini artır */
+    }
+
+    .box {
+        border-radius: 15px;
+        /* Köşeleri daha yumuşat */
+        box-shadow: 10px 10px 30px #1f2128, -10px -10px 30px #353944;
+        /* Gölgeleri küçült */
+    }
+}
+
+/* Orta ekranlar: 600px - 1024px arası (tablet ve bazı küçük ekranlı dizüstü bilgisayarlar) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .header .container h1 {
+        font-size: 50px;
+        /* Orta ekranlar için h1 boyutu */
+    }
+
+    .about {
+        flex-direction: row;
+        /* Resim ve metin yatay sırada */
+    }
+
+    .about .img {
+        width: 60%;
+        /* Resmin genişliğini %60 yap */
+    }
+
+    .box {
+        border-radius: 25px;
+        /* Köşeleri biraz yuvarlat */
+    }
+}
+
+/* Daha büyük ekranlar: 1024px ve üstü (masaüstü ve büyük tabletler) */
+@media (min-width: 1024px) {
+    .header .container h1 {
+        font-size: 60px;
+        /* Büyük ekranlarda daha büyük font boyutu */
+    }
+
+    .about .img {
+        width: 50%;
+        /* Resmin genişliği 50% */
+    }
+}
